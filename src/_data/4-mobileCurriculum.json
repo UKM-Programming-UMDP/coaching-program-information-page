@@ -13,7 +13,14 @@
     "title": "Dart Lebih Dalam",
     "description": "Pelajari lebih lanjut tentang Dart, termasuk function, list, map, class, dan object-oriented programming. Latihan di DartPad.",
     "subFolder": "week2",
-    "listFiles": ["List_Map.pdf", "Function.pdf", "OOP.pdf", "Kuis.txt"]
+    "listFiles": [
+      "List_Map.pdf",
+      "Function.pdf",
+      "OOP.pdf",
+      "Turn_Based_Game.txt",
+      "Turn_Based_Game_UI.txt",
+      "Kuis.txt"
+    ]
   },
   {
     "title": "Widget",

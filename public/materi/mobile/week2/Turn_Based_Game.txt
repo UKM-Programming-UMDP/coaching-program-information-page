@@ -1,0 +1,174 @@
+import "dart:math";
+
+abstract class Character {
+  String name;
+  int health;
+  int attackPower;
+  int defense;
+
+  bool isStunned = false;
+  bool isPoisoned = false;
+
+  Character(this.name, this.health, this.attackPower, this.defense) {
+    print("Character ${this.name} has been created");
+  }
+
+  void castSpecialAbility(Character target);
+
+  void doAttack(Character target) {
+    // 40% trigger ability
+    if (!this.isStunned) {
+      if (Random().nextDouble() <= 0.4) castSpecialAbility(target);
+      int damage = max(this.attackPower - target.defense, 0);
+      target.health -= damage;
+      print("${this.name} attacks ${target.name} for $damage damage!");
+      if (target.health <= 0) {
+        print("${target.name} is defeated");
+      }
+    } else {
+      print("Oh no, ${this.name} is stunned, cannot attack");
+      this.isStunned = false;
+    }
+  }
+  
+  void applyEffect() {
+    if(this.isPoisoned){
+      this.health -= 100;
+      print("${this.name} is poisoned, suffer 100 damage");
+    }
+  }
+}
+
+class Knight extends Character {
+  Knight(name) : super(name, 1500, 400, 300);
+
+  @override
+  castSpecialAbility(Character target) {
+    print(
+        "${this.name} (${this.runtimeType}) cast 'Shield Strike' to ${target.name} (${target.runtimeType})");
+    target.isStunned = true;
+  }
+}
+
+class Witch extends Character {
+  Witch(name) : super(name, 1200, 660, 150);
+
+  @override
+  castSpecialAbility(Character target) {
+    print(
+        "${this.name} (${this.runtimeType}) cast 'Poison Cloud' to ${target.name} (${target.runtimeType})");
+    target.isPoisoned = true;
+  }
+}
+
+void main() {
+  Knight knight = Knight("Luvi");
+  Witch witch = Witch("Nicholas");
+
+  int roundNumber = 1;
+  while (knight.health > 0 && witch.health > 0) {
+    bool knightTurn = Random().nextBool();
+    print('===== Round $roundNumber =====');
+    roundNumber++;
+    if (knightTurn) {
+      knight.doAttack(witch);
+      if (witch.health > 0) {
+        witch.doAttack(knight);
+      }
+    } else {
+      witch.doAttack(knight);
+      if (knight.health > 0) {
+        knight.doAttack(witch);
+      }
+    }
+    knight.applyEffect();
+    witch.applyEffect();
+  }
+}
+
+
+
+
+import "dart:math";
+
+//knight
+String knightName = "Luvi";
+int knightHealth = 1000;
+int knightAttackPower = 200;
+int knightDefense = 300;
+
+//witch
+String witchName = "Nicholas";
+int witchHealth = 800;
+int witchAttackPower = 330;
+int witchDefense = 150;
+
+int doAttack(
+    String attackerName,
+    int attackerHealth,
+    int attackerAttackPower,
+    int attackerDefense,
+    String targetName,
+    int targetHealth,
+    int targetAttackPower,
+    int targetDefense) {
+  int damage = max(attackerAttackPower - targetDefense, 0);
+  targetHealth -= damage;
+  print("$attackerName attacks $targetName for $damage damage!");
+  if (targetHealth <= 0) {
+    print("$targetName is defeated");
+  }
+  return targetHealth;
+}
+
+void main() {
+  int roundNumber = 1;
+  while (knightHealth > 0 && witchHealth > 0) {
+    bool knightTurn = Random().nextBool();
+    print('===== Round $roundNumber =====');
+    roundNumber++;
+    if (knightTurn) {
+      witchHealth = doAttack(
+          knightName,
+          knightHealth,
+          knightAttackPower,
+          knightDefense,
+          witchName,
+          witchHealth,
+          witchAttackPower,
+          witchDefense);
+      if (witchHealth > 0) {
+        knightHealth = doAttack(
+            witchName,
+            witchHealth,
+            witchAttackPower,
+            witchDefense,
+            knightName,
+            knightHealth,
+            knightAttackPower,
+            knightDefense);
+      }
+    } else {
+      knightHealth = doAttack(
+          witchName,
+          witchHealth,
+          witchAttackPower,
+          witchDefense,
+          knightName,
+          knightHealth,
+          knightAttackPower,
+          knightDefense);
+      if (knightHealth > 0) {
+        witchHealth = doAttack(
+            knightName,
+            knightHealth,
+            knightAttackPower,
+            knightDefense,
+            witchName,
+            witchHealth,
+            witchAttackPower,
+            witchDefense);
+      }
+    }
+  }
+}
