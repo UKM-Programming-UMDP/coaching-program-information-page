@@ -1,0 +1,275 @@
+import "dart:math";
+import 'package:flutter/material.dart';
+
+abstract class Character {
+  String name;
+  int health;
+  int attackPower;
+  int defense;
+
+  bool isStunned = false;
+  bool isPoisoned = false;
+
+  Character(this.name, this.health, this.attackPower, this.defense) {
+    print("Character ${this.name} has been created");
+  }
+
+  void castSpecialAbility(Character target);
+
+  void doAttack(Character target) {
+    // 40% trigger ability
+    if (!this.isStunned) {
+      if (Random().nextDouble() <= 0.4) castSpecialAbility(target);
+      int damage = max(this.attackPower - target.defense, 0);
+      target.health -= damage;
+      print("${this.name} attacks ${target.name} for $damage damage!");
+      if (target.health <= 0) {
+        print("${target.name} is defeated");
+      }
+    } else {
+      print("Oh no, ${this.name} is stunned, cannot attack");
+      this.isStunned = false;
+    }
+  }
+
+  void applyEffect() {
+    if (this.isPoisoned) {
+      this.health -= 100;
+      print("${this.name} is poisoned, suffer 100 damage");
+    }
+  }
+}
+
+class Knight extends Character {
+  Knight(name) : super(name, 1500, 400, 300);
+
+  @override
+  castSpecialAbility(Character target) {
+    print(
+        "${this.name} (${this.runtimeType}) cast 'Shield Strike' to ${target.name} (${target.runtimeType})");
+    target.isStunned = true;
+  }
+}
+
+class Witch extends Character {
+  Witch(name) : super(name, 1200, 660, 150);
+
+  @override
+  castSpecialAbility(Character target) {
+    print(
+        "${this.name} (${this.runtimeType}) cast 'Poison Cloud' to ${target.name} (${target.runtimeType})");
+    target.isPoisoned = true;
+  }
+}
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: GameScreen(),
+    );
+  }
+}
+
+class GameScreen extends StatefulWidget {
+  @override
+  _GameScreenState createState() => _GameScreenState();
+}
+
+class _GameScreenState extends State<GameScreen> {
+  Knight knight = Knight("Luvi");
+  Witch witch = Witch("Nicholas");
+  int roundNumber = 1;
+  String log = "";
+
+  bool isKnightAttacking = false;
+  bool isWitchAttacking = false;
+  bool knightTurn = false;
+
+  void attack() {
+    setState(() {
+      if (knight.health <= 0 || witch.health <= 0) {
+        return;
+      }
+
+      knightTurn = Random().nextBool();
+      log += '===== Round $roundNumber =====\n';
+      roundNumber++;
+
+      if (knightTurn) {
+        knight.doAttack(witch);
+        setState(() {
+          isKnightAttacking = true;
+        });
+        Future.delayed(Duration(milliseconds: 300), () {
+          setState(() {
+            isKnightAttacking = false;
+            if (witch.health > 0) {
+              witch.doAttack(knight);
+              setState(() {
+                isWitchAttacking = true;
+              });
+              Future.delayed(Duration(milliseconds: 300), () {
+                setState(() {
+                  isWitchAttacking = false;
+                });
+              });
+            }
+          });
+        });
+      } else {
+        witch.doAttack(knight);
+        setState(() {
+          isWitchAttacking = true;
+        });
+        Future.delayed(Duration(milliseconds: 300), () {
+          setState(() {
+            isWitchAttacking = false;
+            if (knight.health > 0) {
+              knight.doAttack(witch);
+              setState(() {
+                isKnightAttacking = true;
+              });
+              Future.delayed(Duration(milliseconds: 300), () {
+                setState(() {
+                  isKnightAttacking = false;
+                });
+              });
+            }
+          });
+        });
+      }
+
+      knight.applyEffect();
+      witch.applyEffect();
+
+      if (knight.health <= 0 || witch.health <= 0) {
+        log += "${knight.health <= 0 ? witch.name : knight.name} wins!\n";
+      }
+    });
+  }
+
+  void resetGame() {
+    setState(() {
+      knight = Knight("Luvi");
+      witch = Witch("Nicholas");
+      roundNumber = 1;
+      log = "";
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Turn-Based Game"),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                TweenAnimationBuilder<double>(
+                  tween: Tween<double>(
+                      begin: 0,
+                      end: isKnightAttacking && !knight.isStunned ? 50 : 0),
+                  duration: Duration(milliseconds: 100),
+                  curve: Curves.easeInOut,
+                  builder: (context, value, child) {
+                    return Transform.translate(
+                      offset: Offset(value, 0),
+                      child: child,
+                    );
+                  },
+                  child: CharacterWidget(character: knight),
+                ),
+                TweenAnimationBuilder<double>(
+                  tween: Tween<double>(
+                      begin: 0,
+                      end: isWitchAttacking && !witch.isStunned ? -50 : 0),
+                  duration: Duration(milliseconds: 100),
+                  curve: Curves.easeInOut,
+                  builder: (context, value, child) {
+                    return Transform.translate(
+                      offset: Offset(value, 0),
+                      child: child,
+                    );
+                  },
+                  child: CharacterWidget(character: witch),
+                ),
+              ],
+            ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: attack,
+              child: Text("Attack"),
+            ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: resetGame,
+              child: Text("Reset"),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class CharacterWidget extends StatelessWidget {
+  final Character character;
+
+  CharacterWidget({required this.character});
+
+  @override
+  Widget build(BuildContext context) {
+    double healthPercentage =
+        (character.health / (character is Knight ? 1500 : 1200)) * 100;
+    if (healthPercentage < 0) healthPercentage = 0;
+
+    return Column(
+      children: [
+        Text(character.name, style: TextStyle(fontSize: 20)),
+        SizedBox(height: 5),
+        Center(
+          child:
+              Text((character.health > 0) ? "${character.health}" : "Defeated"),
+        ),
+        Stack(
+          alignment: Alignment.centerLeft,
+          children: [
+            Container(
+              width: 100,
+              height: 20,
+              decoration: BoxDecoration(
+                color: Colors.grey[300],
+                borderRadius: BorderRadius.circular(10),
+              ),
+            ),
+            AnimatedContainer(
+              duration: Duration(milliseconds: 500),
+              width: healthPercentage,
+              height: 20,
+              decoration: BoxDecoration(
+                color: healthPercentage > 70
+                    ? Colors.green
+                    : (healthPercentage > 30 ? Colors.amber : Colors.red),
+                borderRadius: BorderRadius.circular(10),
+              ),
+            ),
+          ],
+        ),
+        if (character.isStunned)
+          Text("Stunned!", style: TextStyle(color: Colors.amber)),
+        if (character.isPoisoned)
+          Text("Poisoned!", style: TextStyle(color: Colors.purple)),
+      ],
+    );
+  }
+}
