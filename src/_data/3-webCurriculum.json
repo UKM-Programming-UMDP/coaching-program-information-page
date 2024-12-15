@@ -29,10 +29,10 @@
     "listFiles": ["React_Router.pdf", "React_Router.pptx"]
   },
   {
-    "title": "Bootstrap",
-    "description": "Pelajari Bootstrap,  framework  CSS yang memudahkanmu membangun website  responsive  dan  stylish!",
+    "title": "Styling",
+    "description": "Pelajari cara Styling menggunakan framework CSS yang memudahkanmu membangun website responsive dan stylish!",
     "subFolder": "week5",
-    "listFiles": ["Bootstrap.pdf", "Bootstrap.pptx"]
+    "listFiles": ["Tailwind.pdf", "Bootstrap.pdf"]
   },
   {
     "title": "Pengenalan Strapi dan Relasi Tabel Database",
