@@ -44,7 +44,7 @@
     "title": "Asynchronous Programming",
     "description": "Pelajari cara menjalankan kode tanpa blocking UI,  menangani Future, async/await, dan error handling.  Siap hadapi tantangan asynchronous di Flutter!",
     "subFolder": "week6",
-    "listFiles": []
+    "listFiles": ["models.dart"]
   },
   {
     "title": "Integrasi API",
