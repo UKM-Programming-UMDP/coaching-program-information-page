@@ -1,7 +1,7 @@
 [
   {
     "title": "Kenalan dengan Dart dan Flutter",
-    "description": "Dasar-dasar Dart dan instalasi Flutter dengan video tutorial interaktif. Latihan di DartPad. Kuis di akhir pertemuan.",
+    "description": "Dasar-dasar <b>Dart</b> dan instalasi <b>Flutter</b> dengan video tutorial interaktif. Latihan di <b>DartPad</b>. Kuis di akhir pertemuan.",
     "subFolder": "week1",
     "listFiles": [
       "Flutter_dan_Dart.pptx",
@@ -11,7 +11,7 @@
   },
   {
     "title": "Dart Lebih Dalam",
-    "description": "Pelajari lebih lanjut tentang Dart, termasuk function, list, map, class, dan object-oriented programming. Latihan di DartPad.",
+    "description": "Pelajari lebih lanjut tentang Dart, termasuk <b><i>function</b></i>, <b><i>list</b></i>, <b><i>map</b></i>, <b><i>class</i></b>, dan <b><i>object-oriented programming</i></b>. Latihan di DartPad.",
     "subFolder": "week2",
     "listFiles": [
       "List_Map.pdf",
@@ -24,25 +24,25 @@
   },
   {
     "title": "Widget",
-    "description": "Eksplorasi widget dasar Flutter seperti Text, Image, Container, Row, dan Column dalam menyusun layout melalui codelab interaktif di DartPad.",
+    "description": "Eksplorasi <b>Widget</b> dasar Flutter seperti <b>Text</b>, <b>Image</b>, <b>Container</b>, <b>Row</b>, dan <b>Column</b> dalam menyusun <i>layout</i> melalui codelab interaktif di DartPad.",
     "subFolder": "week3",
     "listFiles": ["Widget.pdf", "Widget.txt", "Kalkulator.txt"]
   },
   {
     "title": "State Management dengan GetX",
-    "description": "Perkenalkan GetX dengan aplikasi game sederhana. Pelajari state management dengan cara yang menyenangkan!",
+    "description": "Perkenalkan <b>GetX</b> dengan aplikasi game sederhana. Pelajari <b><i>State Management</i></b> dengan cara yang menyenangkan!",
     "subFolder": "week4",
     "listFiles": []
   },
   {
     "title": "Kuasai GetX Navigation",
-    "description": "Buat aplikasi multi-page dengan GetX. Eksplorasi berbagai jenis transisi halaman.",
+    "description": "Buat aplikasi <i>multi-page</i> dengan GetX. Eksplorasi berbagai jenis transisi halaman.",
     "subFolder": "week5",
     "listFiles": []
   },
   {
     "title": "Asynchronous Programming",
-    "description": "Pelajari cara menjalankan kode tanpa blocking UI,  menangani Future, async/await, dan error handling.  Siap hadapi tantangan asynchronous di Flutter!",
+    "description": "Pelajari cara menjalankan kode tanpa <b>blocking UI</b>,  <b>menangani Future</b>, <b>async/await</b>, dan <b>error handling</b>.  Siap hadapi tantangan <b><i>asynchronous</i></b> di Flutter!",
     "subFolder": "week6",
     "listFiles": ["models.dart"]
   },

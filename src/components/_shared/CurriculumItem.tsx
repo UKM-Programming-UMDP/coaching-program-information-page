@@ -11,6 +11,7 @@ import { downloadFile } from "@common/utils/files";
 import clsx from "clsx";
 import { useState } from "react";
 import { FaCheck, FaChevronDown, FaDownload } from "react-icons/fa";
+import parse from "html-react-parser";
 
 interface Props {
   data: CurriculumData;
@@ -76,7 +77,7 @@ const CurriculumItem = (props: Props) => {
             from="top"
             duration={0.3}
           >
-            <div className="opacity-90 text-justify">{description}</div>
+            <div className="opacity-90 text-justify">{parse(description)}</div>
           </TrainAppear>
         </div>
 
