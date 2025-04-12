@@ -42,14 +42,14 @@
   },
   {
     "title": "Full-Stack React",
-    "description": "Gabungkan  frontend  React dengan  backend  Strapi yang telah kamu buat!  Pelajari cara  fetching  data, menampilkannya di aplikasi,  dan membangun fitur CRUD.",
+    "description": "Gabungkan  frontend  React dengan backend yang telah kamu buat!  Pelajari cara  fetching  data, menampilkannya di aplikasi,  dan membangun fitur CRUD.",
     "subFolder": "week7",
-    "listFiles": ["Full_Stack_React.pdf"]
+    "listFiles": ["Full_Stack_React.pdf", "Pages_Components.zip"]
   },
   {
     "title": "Capstone Project",
     "description": "Capstone Project  ini  dirancang  untuk  mengukur  pemahamanmu  tentang  pengembangan  aplikasi  web  full-stack  modern.  Kamu  akan  mempraktikkan  konsep-konsep  penting,  seperti  component-based architecture,  state management,  routing,  consume API,  dan  CRUD.",
     "subFolder": "week8",
-    "listFiles": []
+    "listFiles": ["CP - Web - Capstone - Panduan Capstone Project.pdf"]
   }
 ]
