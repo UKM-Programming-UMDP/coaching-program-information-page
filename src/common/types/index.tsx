@@ -12,6 +12,7 @@ export type CurriculumData = {
   description: string;
   subFolder: string;
   listFiles: string[];
+  listLinks: { url: string; name: string }[];
 };
 
 export type Subject = "web" | "mobile" | "game";

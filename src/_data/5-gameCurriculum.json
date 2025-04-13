@@ -9,31 +9,36 @@
       "Penjelasan_PPT_Unity.pdf",
       "GameObject_Component_Canvas_UI.pdf",
       "Pengenalan_Godot.pdf"
-    ]
+    ],
+    "listLinks": []
   },
   {
     "title": "C#: Bahasa Pemrograman untuk Game",
     "description": "C# adalah bahasa yang akan menghidupkan game-mu!  Pelajari sintaks dasar C#,  variabel,  tipe data,  operator,  dan kontrol alur.  Siap menjadi  game programmer  handal?",
     "subFolder": "week2",
-    "listFiles": ["Dasar-Dasar_C_Sharp.pdf", "C_Sharp_Sintaks.txt"]
+    "listFiles": ["Dasar-Dasar_C_Sharp.pdf", "C_Sharp_Sintaks.txt"],
+    "listLinks": []
   },
   {
     "title": "Dasar-Dasar Pemrograman dengan C#",
     "description": "Perdalam  skill  C#-mu dengan konsep pemrograman  esensial,  seperti percabangan,  perulangan,  dan fungsi.  Latih logikamu dan  build  fondasi  programming  yang  kuat!",
     "subFolder": "week3",
-    "listFiles": ["Percabangan_Perulangan.pdf", "Percabangan_Perulangan.txt"]
+    "listFiles": ["Percabangan_Perulangan.pdf", "Percabangan_Perulangan.txt"],
+    "listLinks": []
   },
   {
     "title": "Pemrograman Berorientasi Objek (OOP) di C#",
     "description": "OOP adalah paradigma penting dalam  game development.  Kuasai konsep  class,  object,  inheritance,  dan  encapsulation  untuk  membuat kode yang  terstruktur dan reusable.",
     "subFolder": "week4",
-    "listFiles": ["OOP.pdf", "OOP.txt"]
+    "listFiles": ["OOP.pdf", "OOP.txt"],
+    "listLinks": []
   },
   {
     "title": "Action!  Animasi dan Fisika di Unity",
     "description": "Berikan  nyawa  pada game-mu dengan animasi dan fisika!  Pelajari cara  menganimasikan  karakter,  menambahkan efek fisika,  dan  membuat  game-mu  lebih  interaktif.",
     "subFolder": "week5",
-    "listFiles": ["Animasi_dan_Fisika.pdf", "Pembahasan_Tugas.pdf"]
+    "listFiles": ["Animasi_dan_Fisika.pdf", "Pembahasan_Tugas.pdf"],
+    "listLinks": []
   },
   {
     "title": "Membangun Game Pertamamu",
@@ -44,18 +49,21 @@
       "Endless_Runner_Dengan_Kode.pdf",
       "Rock_Paper_Scissors.pdf",
       "Crossy_Road.pdf"
-    ]
+    ],
+    "listLinks": []
   },
   {
     "title": "Jadilah  Game Developer  Profesional:  Testing  dan  Debugging",
     "description": "Game  yang  baik  harus  bebas  dari  bug!  Pelajari  teknik  testing  dan  debugging  untuk  memastikan  game-mu  berjalan  lancar  dan  menyenangkan.",
     "subFolder": "week7",
-    "listFiles": ["Testing_dan_Debugging.pdf"]
+    "listFiles": ["Testing_dan_Debugging.pdf"],
+    "listLinks": []
   },
   {
     "title": "Capstone Project:  Game Developer  Sejati",
     "description": "Wujudkan  game  impianmu  di  Capstone Project  ini!  Terapkan  semua  skill  yang  telah  dipelajari  untuk  membangun  game  yang  unik  dan  menarik.  Show the world your game dev talent!",
     "subFolder": "week8",
-    "listFiles": ["GDD_Template.docx", "Sekedar_Ide.txt"]
+    "listFiles": ["GDD_Template.docx", "Sekedar_Ide.txt"],
+    "listLinks": []
   }
 ]

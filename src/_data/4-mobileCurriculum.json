@@ -7,7 +7,8 @@
       "Flutter_dan_Dart.pptx",
       "Flutter_dan_Dart.pdf",
       "Instalasi_Flutter.pdf"
-    ]
+    ],
+    "listLinks": []
   },
   {
     "title": "Dart Lebih Dalam",
@@ -20,42 +21,58 @@
       "Turn_Based_Game.txt",
       "Turn_Based_Game_UI.txt",
       "Kuis.txt"
-    ]
+    ],
+    "listLinks": []
   },
   {
     "title": "Widget",
     "description": "Eksplorasi <b>Widget</b> dasar Flutter seperti <b>Text</b>, <b>Image</b>, <b>Container</b>, <b>Row</b>, dan <b>Column</b> dalam menyusun <i>layout</i> melalui codelab interaktif di DartPad.",
     "subFolder": "week3",
-    "listFiles": ["Widget.pdf", "Widget.txt", "Kalkulator.txt"]
+    "listFiles": ["Widget.pdf", "Widget.txt", "Kalkulator.txt"],
+    "listLinks": []
   },
   {
     "title": "State Management dengan GetX",
     "description": "Perkenalkan <b>GetX</b> dengan aplikasi game sederhana. Pelajari <b><i>State Management</i></b> dengan cara yang menyenangkan!",
     "subFolder": "week4",
-    "listFiles": []
+    "listFiles": [],
+    "listLinks": []
   },
   {
     "title": "Kuasai GetX Navigation",
     "description": "Buat aplikasi <i>multi-page</i> dengan GetX. Eksplorasi berbagai jenis transisi halaman.",
     "subFolder": "week5",
-    "listFiles": []
+    "listFiles": [],
+    "listLinks": []
   },
   {
     "title": "Asynchronous Programming",
     "description": "Pelajari cara menjalankan kode tanpa <b>blocking UI</b>,  <b>menangani Future</b>, <b>async/await</b>, dan <b>error handling</b>.  Siap hadapi tantangan <b><i>asynchronous</i></b> di Flutter!",
     "subFolder": "week6",
-    "listFiles": ["models.dart"]
+    "listFiles": ["models.dart"],
+    "listLinks": []
   },
   {
     "title": "Integrasi API",
     "description": "Pelajari cara mengambil data dari API buku Open Library. Tampilkan data buku (judul, penulis, cover) di aplikasi.",
     "subFolder": "week7",
-    "listFiles": []
+    "listFiles": [],
+    "listLinks": [
+      {
+        "url": "https://drive.google.com/file/d/1J9ZZgDNmou8_px2HopwhwQx_MDRexdkd/view?usp=drivesdk",
+        "name": "Video Getx Part 1"
+      },
+      {
+        "url": "https://drive.google.com/file/d/1JELwf-wsP13VYSbdx6UE2Cu6uDfX9lUu/view?usp=drivesdk",
+        "name": "Video Getx Part 2"
+      }
+    ]
   },
   {
     "title": "Capstone Project",
     "description": "Mengerjakan proyek aplikasi Flutter dengan menerapkan GetX, navigasi, asynchronous programming, dan integrasi API.",
     "subFolder": "week8",
-    "listFiles": []
+    "listFiles": [],
+    "listLinks": []
   }
 ]
