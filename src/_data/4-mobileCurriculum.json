@@ -7,8 +7,7 @@
       "Flutter_dan_Dart.pptx",
       "Flutter_dan_Dart.pdf",
       "Instalasi_Flutter.pdf"
-    ],
-    "listLinks": []
+    ]
   },
   {
     "title": "Dart Lebih Dalam",
@@ -21,36 +20,31 @@
       "Turn_Based_Game.txt",
       "Turn_Based_Game_UI.txt",
       "Kuis.txt"
-    ],
-    "listLinks": []
+    ]
   },
   {
     "title": "Widget",
     "description": "Eksplorasi <b>Widget</b> dasar Flutter seperti <b>Text</b>, <b>Image</b>, <b>Container</b>, <b>Row</b>, dan <b>Column</b> dalam menyusun <i>layout</i> melalui codelab interaktif di DartPad.",
     "subFolder": "week3",
-    "listFiles": ["Widget.pdf", "Widget.txt", "Kalkulator.txt"],
-    "listLinks": []
+    "listFiles": ["Widget.pdf", "Widget.txt", "Kalkulator.txt"]
   },
   {
     "title": "State Management dengan GetX",
     "description": "Perkenalkan <b>GetX</b> dengan aplikasi game sederhana. Pelajari <b><i>State Management</i></b> dengan cara yang menyenangkan!",
     "subFolder": "week4",
-    "listFiles": [],
-    "listLinks": []
+    "listFiles": []
   },
   {
     "title": "Kuasai GetX Navigation",
     "description": "Buat aplikasi <i>multi-page</i> dengan GetX. Eksplorasi berbagai jenis transisi halaman.",
     "subFolder": "week5",
-    "listFiles": [],
-    "listLinks": []
+    "listFiles": []
   },
   {
     "title": "Asynchronous Programming",
     "description": "Pelajari cara menjalankan kode tanpa <b>blocking UI</b>,  <b>menangani Future</b>, <b>async/await</b>, dan <b>error handling</b>.  Siap hadapi tantangan <b><i>asynchronous</i></b> di Flutter!",
     "subFolder": "week6",
-    "listFiles": ["models.dart"],
-    "listLinks": []
+    "listFiles": ["models.dart"]
   },
   {
     "title": "Integrasi API",
@@ -72,7 +66,6 @@
     "title": "Capstone Project",
     "description": "Mengerjakan proyek aplikasi Flutter dengan menerapkan GetX, navigasi, asynchronous programming, dan integrasi API.",
     "subFolder": "week8",
-    "listFiles": [],
-    "listLinks": []
+    "listFiles": []
   }
 ]

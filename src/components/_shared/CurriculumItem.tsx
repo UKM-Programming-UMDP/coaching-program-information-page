@@ -26,7 +26,7 @@ interface Props {
 
 const CurriculumItem = (props: Props) => {
   const { data, index, subject } = props;
-  const { title, description, subFolder, listFiles, listLinks } = data;
+  const { title, description, subFolder, listFiles, listLinks = [] } = data;
 
   const [isOpen, setIsOpen] = useState(false);
   const [fileToDownload, setFileToDownload] = useState<string | null>(null);

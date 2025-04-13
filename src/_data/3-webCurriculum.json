@@ -3,8 +3,7 @@
     "title": "JavaScript Fundamental",
     "description": "Pelajari fundamental JavaScript,  mulai dari variabel,  percabangan,  perulangan,  hingga  fungsi.  Kenali juga  array  dan  object  di JavaScript!",
     "subFolder": "week1",
-    "listFiles": ["Javascript.pdf", "Javascript.pptx", "Javascript.txt"],
-    "listLinks": []
+    "listFiles": ["Javascript.pdf", "Javascript.pptx", "Javascript.txt"]
   },
   {
     "title": "React.js Fundamental",
@@ -15,49 +14,42 @@
       "React.js.pdf",
       "React.js.pptx",
       "React.js.txt"
-    ],
-    "listLinks": []
+    ]
   },
   {
     "title": "Consume API",
     "description": "Kuasai Axios untuk mengambil data dari API dan menampilkannya di aplikasi React-mu.  Praktik langsung dengan  PokeAPI!",
     "subFolder": "week3",
-    "listFiles": ["Consume_API.pdf", "Consume_API.pptx"],
-    "listLinks": []
+    "listFiles": ["Consume_API.pdf", "Consume_API.pptx"]
   },
   {
     "title": "React Router",
     "description": "Pelajari React Router untuk membuat navigasi antar halaman di aplikasi React.",
     "subFolder": "week4",
-    "listFiles": ["React_Router.pdf", "React_Router.pptx"],
-    "listLinks": []
+    "listFiles": ["React_Router.pdf", "React_Router.pptx"]
   },
   {
     "title": "Styling",
     "description": "Pelajari cara Styling menggunakan framework CSS yang memudahkanmu membangun website responsive dan stylish!",
     "subFolder": "week5",
-    "listFiles": ["Tailwind.pdf", "Bootstrap.pdf", "Tailwind.pptx"],
-    "listLinks": []
+    "listFiles": ["Tailwind.pdf", "Bootstrap.pdf", "Tailwind.pptx"]
   },
   {
     "title": "Pengenalan Strapi dan Relasi Tabel Database",
     "description": "Belajar dasar-dasar Strapi, membuat relasi tabel, dan mengelola data.",
     "subFolder": "week6",
-    "listFiles": ["Instalasi_Strapi.pdf", "Strapi.pdf"],
-    "listLinks": []
+    "listFiles": ["Instalasi_Strapi.pdf", "Strapi.pdf"]
   },
   {
     "title": "Full-Stack React",
     "description": "Gabungkan  frontend  React dengan backend yang telah kamu buat!  Pelajari cara  fetching  data, menampilkannya di aplikasi,  dan membangun fitur CRUD.",
     "subFolder": "week7",
-    "listFiles": ["Full_Stack_React.pdf", "Pages_Components.zip"],
-    "listLinks": []
+    "listFiles": ["Full_Stack_React.pdf", "Pages_Components.zip"]
   },
   {
     "title": "Capstone Project",
     "description": "Capstone Project  ini  dirancang  untuk  mengukur  pemahamanmu  tentang  pengembangan  aplikasi  web  full-stack  modern.  Kamu  akan  mempraktikkan  konsep-konsep  penting,  seperti  component-based architecture,  state management,  routing,  consume API,  dan  CRUD.",
     "subFolder": "week8",
-    "listFiles": ["CP - Web - Capstone - Panduan Capstone Project.pdf"],
-    "listLinks": []
+    "listFiles": ["CP - Web - Capstone - Panduan Capstone Project.pdf"]
   }
 ]

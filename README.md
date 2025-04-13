@@ -33,7 +33,7 @@ Untuk menambahkan materi pada bidang Web, buka file [src/\_data/3-webCurriculum.
     "description": "Belajar React Hooks, React Router, dan state management.",
     "subFolder": "", // contoh jika belum ada materi
     "listFiles": [],
-    "listLinks": [], // contoh jika belum ada link
+    // "listLinks": [], // Jika belum ada link, listLinks tidak perlu dibuat
   }
 ]
 ```
