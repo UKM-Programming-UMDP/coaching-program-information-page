@@ -1,0 +1,25 @@
+name: Lint Check
+
+on:
+  pull_request:
+    branches:
+      - master
+      - "**"
+
+jobs:
+  lint:
+    name: Run Bun Lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v1
+
+      - name: Install Dependencies
+        run: bun install
+
+      - name: Run Lint
+        run: bun run lint
