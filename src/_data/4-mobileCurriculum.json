@@ -50,7 +50,17 @@
     "title": "Integrasi API",
     "description": "Pelajari cara mengambil data dari API buku Open Library. Tampilkan data buku (judul, penulis, cover) di aplikasi.",
     "subFolder": "week7",
-    "listFiles": []
+    "listFiles": [],
+    "listLinks": [
+      {
+        "url": "https://youtu.be/WAsxYNltdr0",
+        "name": "CRUD with Getx Part 1"
+      },
+      {
+        "url": "https://youtu.be/bv8mkO8LpHc",
+        "name": "CRUD with Getx Part 2"
+      }
+    ]
   },
   {
     "title": "Capstone Project",

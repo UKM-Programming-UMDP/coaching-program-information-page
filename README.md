@@ -2,10 +2,10 @@
 
 ## How to add materi?
 
-Ada dua hal yang perlu diperhatikan untuk menambahkan file:
+Ada dua hal yang perlu diperhatikan untuk menambah/mengubah materi:
 
 1. update json pada [src/\_data](src/_data/) untuk menampilkan materi pada web
-2. update file pada [public/materi](public/materi/) agar dapat didownload
+2. update file pada [public/materi](public/materi/) agar dapat didownload (Jika hanya menambah/mengubah link pada materi, step 2 tidak perlu dilakukan)
 
 Pada folder [public/materi](public/materi/), hanya ada boleh 3 main folder, yaitu `web`, `mobile`, dan `game`.
 Lalu masing-masing sub-folder pada ketiga folder utama tersebut, ditentukan sesuai dengan data yang ditulis pada [src/\_data](src/_data/).
@@ -20,13 +20,20 @@ Untuk menambahkan materi pada bidang Web, buka file [src/\_data/3-webCurriculum.
     "title": "Pengenalan Javascript",
     "description": "Belajar dasar-dasar Javascript, tools yang digunakan, dan konsep-konsep dasar pemrograman.",
     "subFolder": "week1",
-    "listFiles": ["Javascript.docx", "Javascript.pptx", "Javascript.txt"]
+    "listFiles": ["Javascript.docx", "Javascript.pptx", "Javascript.txt"],
+    "listLinks": [
+      {
+        "url": "https://example.com", // Url tujuan
+        "name": "Video Pembelajaran"  // Nama yang akan ditampilkan di web
+      },
+    ]
   }
   {
     "title": "React.js Lanjutan",
     "description": "Belajar React Hooks, React Router, dan state management.",
     "subFolder": "", // contoh jika belum ada materi
-    "listFiles": []
+    "listFiles": [],
+    // "listLinks": [], // Jika belum ada link, listLinks tidak perlu dibuat
   }
 ]
 ```

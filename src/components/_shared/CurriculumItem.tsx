@@ -10,7 +10,12 @@ import {
 import { downloadFile } from "@common/utils/files";
 import clsx from "clsx";
 import { useState } from "react";
-import { FaCheck, FaChevronDown, FaDownload } from "react-icons/fa";
+import {
+  FaCheck,
+  FaChevronDown,
+  FaDownload,
+  FaExternalLinkAlt,
+} from "react-icons/fa";
 import parse from "html-react-parser";
 
 interface Props {
@@ -21,7 +26,7 @@ interface Props {
 
 const CurriculumItem = (props: Props) => {
   const { data, index, subject } = props;
-  const { title, description, subFolder, listFiles } = data;
+  const { title, description, subFolder, listFiles, listLinks = [] } = data;
 
   const [isOpen, setIsOpen] = useState(false);
   const [fileToDownload, setFileToDownload] = useState<string | null>(null);
@@ -57,6 +62,8 @@ const CurriculumItem = (props: Props) => {
   const isFileExists = subFolder && listFiles.length > 0;
   const isFileDownloaded = (file: string) =>
     isFileHasDownloaded(`${baseFilePath}/${file}`);
+
+  const isLinkExists = listLinks.length > 0;
 
   return (
     <div>
@@ -94,7 +101,7 @@ const CurriculumItem = (props: Props) => {
       {/* Dropdown Content */}
       <AnimatedHeight isOpen={isOpen}>
         <div className="bg-zinc-800/20 pb-2 ms-1 px-3 pt-2 flex flex-col gap-2">
-          {isFileExists ? (
+          {isFileExists &&
             listFiles.map((file, index) => (
               <div
                 className={clsx(
@@ -107,10 +114,21 @@ const CurriculumItem = (props: Props) => {
                 {iconStateMap[fileToDownload === file ? iconState : "idle"]}
                 <span>{file}</span>
               </div>
-            ))
-          ) : (
-            <div>Belum ada materi 😢</div>
-          )}
+            ))}
+
+          {isLinkExists &&
+            listLinks.map((link, index) => (
+              <div
+                key={index}
+                className="flex items-center gap-3 w-fit cursor-pointer text-blue-400 hover:underline hover:text-blue-300 transition"
+                onClick={() => window.open(link.url, "_blank")}
+              >
+                <FaExternalLinkAlt className="text-sm" />
+                <span>{link.name}</span>
+              </div>
+            ))}
+
+          {!isFileExists && !isLinkExists && <div>Belum ada materi 😢</div>}
         </div>
       </AnimatedHeight>
     </div>

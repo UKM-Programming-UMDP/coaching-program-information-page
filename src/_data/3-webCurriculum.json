@@ -44,7 +44,13 @@
     "title": "Full-Stack React",
     "description": "Gabungkan  frontend  React dengan backend yang telah kamu buat!  Pelajari cara  fetching  data, menampilkannya di aplikasi,  dan membangun fitur CRUD.",
     "subFolder": "week7",
-    "listFiles": ["Full_Stack_React.pdf", "Pages_Components.zip"]
+    "listFiles": ["Full_Stack_React.pdf", "Pages_Components.zip"],
+    "listLinks": [
+      {
+        "url": "https://drive.google.com/file/d/1JvBfUwoGopgsY0oeA6-K9IQ4-PFEVsmp/view?usp=drivesdk",
+        "name": "Video Full Stack React"
+      }
+    ]
   },
   {
     "title": "Capstone Project",
